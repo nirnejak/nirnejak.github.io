@@ -1,7 +1,12 @@
-@import 'https://fonts.googleapis.com/css?family=Google+Sans:100,300,400,500,700,900,100i,300i,400i,500i,700i,900i';
-
 @import url(modal.css);
 @import url(responsive.css);
+
+@font-face {
+	font-family: 'Circular Std Medium';
+	font-style: normal;
+	font-weight: normal;
+	src: local('Circular Std Medium'), url('CircularStd-Medium.woff') format('woff');
+}
 
 /*-------- Global --------*/
 * {
@@ -30,7 +35,7 @@
 }
 
 html {
-	font-family: "Google Sans", sans-serif;
+	font-family: "Circular Std Medium", sans-serif;
 	font-weight: 100;
 }
 

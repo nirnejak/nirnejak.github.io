@@ -8,7 +8,7 @@
     /*-------- Nav --------*/
     .nav {
     	flex-direction: column;
-    	margin-top: 3em;
+    	margin-top: 2em;
     }
 
     .navIcons {
@@ -24,6 +24,10 @@
 	}
 
 	/*-------- Landing --------*/
+	.landingL {
+		margin-top: 1em !important;
+	}
+
     .landingWrapper {
     	flex-direction: column;
     	margin-bottom: 5em;

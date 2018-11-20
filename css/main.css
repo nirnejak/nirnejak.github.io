@@ -1,4 +1,7 @@
+@import 'https://fonts.googleapis.com/css?family=Google+Sans:100,300,400,500,700,900,100i,300i,400i,500i,700i,900i';
+
 @import url(modal.css);
+@import url(responsive.css);
 
 /*-------- Global --------*/
 * {
@@ -27,7 +30,7 @@
 }
 
 html {
-	font-family: "Circular Std Medium", sans-serif;
+	font-family: "Google Sans", sans-serif;
 	font-weight: 100;
 }
 
@@ -91,7 +94,7 @@ p {
 	vertical-align: middle;
 }
 
-.navIcons a{
+.navIcons a {
 	margin-left: 20px;
 }
 
@@ -112,7 +115,7 @@ p {
 /*-------- Landing --------*/
 
 .landing {
-	height: 100vh;
+	min-height: 100vh;
 	position: relative;
 }
 

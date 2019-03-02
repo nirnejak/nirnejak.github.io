@@ -128,7 +128,7 @@ p {
 .landingWrapper {
 	display: flex;
 	justify-content: space-between;
-	margin-top: 40px;
+	margin-top: 10%;
 }
 
 ul {

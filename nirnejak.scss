@@ -19,7 +19,7 @@ $layouts: (none, block, inline-block, flex, grid);
   }
 }
 
-$widths: (5, 10, 15, 20, 25, 30, 35, 40, 45, 50, 55, 60, 65, 70, 75, 80, 85, 90, 95, 100);
+$widths: (0, 5, 10, 15, 20, 25, 30, 35, 40, 45, 50, 55, 60, 65, 70, 75, 80, 85, 90, 95, 100);
 @each $width in $widths {
   .w-#{$width} {
     width: #{$width}% !important;
@@ -70,7 +70,7 @@ $flexs: (column, row);
 }
 
 // Margin and Padding
-$spaceamounts: (5, 10, 15, 20, 25, 30, 35, 40, 45, 50, 55, 60, 65, 70, 75, 80, 85, 90, 95, 100);
+$spaceamounts: (0, 5, 10, 15, 20, 25, 30, 35, 40, 45, 50, 55, 60, 65, 70, 75, 80, 85, 90, 95, 100);
 $sides: (all, top, bottom, left, right);
 
 @each $space in $spaceamounts {

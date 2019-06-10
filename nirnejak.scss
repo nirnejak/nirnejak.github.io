@@ -1,0 +1,96 @@
+$positions: (relative, absolute, fixed, sticky);
+@each $position in $positions {
+  .position-#{$position} {
+    position: #{$position} !important;
+  }
+}
+
+$floats: (left, right);
+@each $float in $floats {
+  .float-#{$float} {
+    float: #{$float} !important;
+  }
+}
+
+$layouts: (none, block, inline-block, flex, grid);
+@each $layout in $layouts {
+  .d-#{$layout} {
+    display: #{$layout} !important;
+  }
+}
+
+$widths: (5, 10, 15, 20, 25, 30, 35, 40, 45, 50, 55, 60, 65, 70, 75, 80, 85, 90, 95, 100);
+@each $width in $widths {
+  .w-#{$width} {
+    width: #{$width}% !important;
+  }
+}
+
+$cursors: (pointer);
+@each $cursor in $cursors {
+  .cursor-#{$cursor} {
+    cursor: #{$cursor} !important;
+  }
+}
+
+$flexs: (column, row);
+@each $flex in $flexs {
+  .flex-#{$flex} {
+    flex-direction: #{$flex} !important;
+  }
+}
+
+.justify-content-center {
+  justify-content: center;
+}
+.justify-content-start {
+  justify-content: flex-start;
+}
+.justify-content-end {
+  justify-content: flex-end;
+}
+.justify-content-between {
+  justify-content: space-between;
+}
+.justify-content-evenly {
+  justify-content: space-evenly;
+}
+.justify-content-around {
+  justify-content: space-around;
+}
+
+.align-items-center {
+  align-items: center;
+}
+.align-items-start {
+  align-items: flex-start;
+}
+.align-items-end {
+  align-items: flex-end;
+}
+
+// Margin and Padding
+$spaceamounts: (5, 10, 15, 20, 25, 30, 35, 40, 45, 50, 55, 60, 65, 70, 75, 80, 85, 90, 95, 100);
+$sides: (all, top, bottom, left, right);
+
+@each $space in $spaceamounts {
+  @each $side in $sides {
+    @if $side == "all" {
+      .m-#{$space} {
+        margin: #{$space}px;
+      }
+
+      .p-#{$space} {
+        padding: #{$space}px;
+      }
+    } @else {
+      .m#{str-slice($side, 0, 1)}-#{$space} {
+        margin-#{$side}: #{$space}px !important;
+      }
+
+      .p#{str-slice($side, 0, 1)}-#{$space} {
+        padding-#{$side}: #{$space}px !important;
+      }
+    }
+  }
+}

@@ -1,11 +1,11 @@
-$positions: (relative, absolute, fixed, sticky);
+$positions: (static, relative, absolute, fixed, sticky);
 @each $position in $positions {
   .position-#{$position} {
     position: #{$position} !important;
   }
 }
 
-$floats: (left, right);
+$floats: (none, left, right);
 @each $float in $floats {
   .float-#{$float} {
     float: #{$float} !important;
@@ -16,13 +16,6 @@ $layouts: (none, block, inline-block, flex, grid);
 @each $layout in $layouts {
   .d-#{$layout} {
     display: #{$layout} !important;
-  }
-}
-
-$widths: (0, 5, 10, 15, 20, 25, 30, 35, 40, 45, 50, 55, 60, 65, 70, 75, 80, 85, 90, 95, 100);
-@each $width in $widths {
-  .w-#{$width} {
-    width: #{$width}% !important;
   }
 }
 
@@ -74,6 +67,13 @@ $spaceamounts: (0, 5, 10, 15, 20, 25, 30, 35, 40, 45, 50, 55, 60, 65, 70, 75, 80
 $sides: (all, top, bottom, left, right);
 
 @each $space in $spaceamounts {
+  .w-#{$space} {
+    width: #{$space}% !important;
+  }
+  .h-#{$space}vh {
+    min-height: #{$space}vh !important;
+  }
+
   @each $side in $sides {
     @if $side == "all" {
       .m-#{$space} {
@@ -90,6 +90,9 @@ $sides: (all, top, bottom, left, right);
 
       .p#{str-slice($side, 0, 1)}-#{$space} {
         padding-#{$side}: #{$space}px !important;
+      }
+      .#{str-slice($side, 0, 1)}-#{$space} {
+        #{$side}: #{$space}px !important;
       }
     }
   }

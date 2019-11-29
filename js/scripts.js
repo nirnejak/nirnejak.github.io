@@ -1,16 +1,15 @@
-function showContactModal() {
-	var modal = document.getElementById('contactModal');
+const modal = document.getElementById('contactModal');
+
+document.querySelector('.contactMe').addEventListener('click', e => {
 	modal.style.display = 'block';
-}
+})
 
-function hideContactModal() {
-	var modal = document.getElementById('contactModal');
+document.querySelector('.closeBtn').addEventListener('click', e => {
 	modal.style.display = 'none';
-}
+})
 
-window.addEventListener('click', function(e) {
-	var modal = document.getElementById('contactModal');
-	if(e.target == modal){
+window.addEventListener('click', e => {
+	if (e.target === modal) {
 		modal.style.display = 'none';
 	}
 });

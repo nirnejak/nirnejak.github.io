@@ -112,7 +112,10 @@ small {
   display: inline-block;
   vertical-align: middle;
 }
-
+.navIcons > a.link {
+	text-decoration: none;
+	color: black;
+}
 .navIcons a {
   margin-left: 10px;
   margin-right: 10px;

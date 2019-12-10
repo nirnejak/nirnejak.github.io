@@ -104,6 +104,21 @@ small {
 
 .navIcons {
   text-align: right;
+  a {
+    margin-left: 10px;
+    margin-right: 10px;
+    i {
+      color: #17191a;
+      font-size: 22px;
+    }
+  }
+  img {
+    margin-right: 10px;
+  }
+  span {
+    color: #027bff;
+    text-decoration: none;
+  }
 }
 
 .navIcons a,
@@ -111,25 +126,6 @@ small {
 .contactMe img {
   display: inline-block;
   vertical-align: middle;
-}
-
-.navIcons a {
-  margin-left: 10px;
-  margin-right: 10px;
-}
-
-.navIcons a i {
-  color: #17191a;
-  font-size: 22px;
-}
-
-.contactMe span {
-  color: #027bff;
-  text-decoration: none;
-}
-
-.contactMe img {
-  margin-right: 10px;
 }
 
 /*-------- Landing --------*/
@@ -205,15 +201,13 @@ ul {
 .skills {
   text-align: center;
   margin-bottom: 20em;
-}
-
-.skills p {
-  margin-bottom: 30px;
-}
-
-.skills img {
-  width: 40px;
-  margin: 0 15px;
+  p {
+    margin-bottom: 30px;
+  }
+  img {
+    width: 40px;
+    margin: 0 15px;
+  }
 }
 
 /*-------- Work 01 --------*/
@@ -222,38 +216,34 @@ ul {
   width: 100%;
   position: relative;
   margin-bottom: 20em;
-}
+  & > .workText {
+    position: absolute;
+    top: 85px;
+    & > .underline {
+      display: block;
+      background: #027bff;
+      height: 3px;
+      width: 61px;
+      margin-top: 5px;
+    }
+  }
+  & > .workImg {
+    width: 85%;
+    float: right;
+    --webkit-box-shadow: 0px 3px 70px 0px rgba(23, 30, 36, 0.06);
+    --moz-box-shadow: 0px 3px 70px 0px rgba(23, 30, 36, 0.06);
+    box-shadow: 0px 3px 70px 0px rgba(23, 30, 36, 0.06);
+  }
 
-.work > .workText {
-  position: absolute;
-  top: 85px;
-}
-
-.work > .workText > .underline {
-  display: block;
-  background: #027bff;
-  height: 3px;
-  width: 61px;
-  margin-top: 5px;
-}
-
-.work > .workImg {
-  width: 85%;
-  float: right;
-  --webkit-box-shadow: 0px 3px 70px 0px rgba(23, 30, 36, 0.06);
-  --moz-box-shadow: 0px 3px 70px 0px rgba(23, 30, 36, 0.06);
-  box-shadow: 0px 3px 70px 0px rgba(23, 30, 36, 0.06);
-}
-
-.work ul {
-  position: absolute;
-  bottom: 0;
-  right: 86%;
-}
-
-.work ul li {
-  margin-top: 20px;
-  margin-right: 10px;
+  ul {
+    position: absolute;
+    bottom: 0;
+    right: 86%;
+    li {
+      margin-top: 20px;
+      margin-right: 10px;
+    }
+  }
 }
 
 /*-------- Work 02 --------*/
@@ -262,63 +252,58 @@ ul {
   width: 100%;
   position: relative;
   margin-bottom: 20em;
-}
+  & > .workText {
+    position: absolute;
+    top: 85px;
+    right: 0;
+    text-align: right;
+    & > .underline {
+      display: block;
+      background: #027bff;
+      height: 3px;
+      width: 61px;
+      margin-top: 5px;
+      float: right;
+    }
+  }
+  & > .workImg {
+    width: 85%;
+    float: left;
+    --webkit-box-shadow: 0px 3px 70px 0px rgba(23, 30, 36, 0.06);
+    --moz-box-shadow: 0px 3px 70px 0px rgba(23, 30, 36, 0.06);
+    box-shadow: 0px 3px 70px 0px rgba(23, 30, 36, 0.06);
+  }
+  ul {
+    position: absolute;
+    bottom: 0;
+    left: 86%;
 
-.work2 > .workText {
-  position: absolute;
-  top: 85px;
-  right: 0;
-  text-align: right;
-}
-
-.work2 > .workText > .underline {
-  display: block;
-  background: #027bff;
-  height: 3px;
-  width: 61px;
-  margin-top: 5px;
-  float: right;
-}
-
-.work2 > .workImg {
-  width: 85%;
-  float: left;
-  --webkit-box-shadow: 0px 3px 70px 0px rgba(23, 30, 36, 0.06);
-  --moz-box-shadow: 0px 3px 70px 0px rgba(23, 30, 36, 0.06);
-  box-shadow: 0px 3px 70px 0px rgba(23, 30, 36, 0.06);
-}
-
-.work2 ul {
-  position: absolute;
-  bottom: 0;
-  left: 86%;
-}
-
-.work2 ul li {
-  margin-top: 20px;
-  margin-left: 10px;
+    li {
+      margin-top: 20px;
+      margin-left: 10px;
+    }
+  }
 }
 /*-------- Work 01 and 02 --------*/
 
-.work a,
-.work2 a {
-  text-decoration: none;
-  color: #17191a;
-}
-
-.work ul li a,
-.work2 ul li a {
-  color: #8f9ea5;
-  font-size: 13px;
-}
-.work ul li a:hover,
-.work2 ul li a:hover {
-  color: #17191a;
-}
-
-.work ul,
-.work2 ul {
-  margin-bottom: 30px;
+.work,
+.work2 {
+  a {
+    text-decoration: none;
+    color: #17191a;
+  }
+  ul {
+    margin-bottom: 30px;
+    li {
+      a {
+        color: #8f9ea5;
+        font-size: 13px;
+        &:hover {
+          color: #17191a;
+        }
+      }
+    }
+  }
 }
 
 /*-------- Footer --------*/
@@ -330,11 +315,10 @@ ul {
   background-size: 320px;
   padding-bottom: 7em;
   text-align: center;
-}
-
-.footer a {
-  color: #027bff;
-  text-decoration: none;
+  a {
+    color: #027bff;
+    text-decoration: none;
+  }
 }
 
 .underlineSmall {

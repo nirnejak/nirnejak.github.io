@@ -67,9 +67,6 @@
     </div>
     <div class="navIcons">
       <a href="/" class="link">Home</a>
-      <a target="_blank" href="https://instagram.com/jitendra.nirnejak">
-        <i class="fab fa-instagram fa-2x"></i>
-      </a>
       <a target="_blank" href="https://www.linkedin.com/in/nirnejak">
         <i class="fab fa-linkedin fa-2x"></i>
       </a>
@@ -126,14 +123,16 @@
     </div>
   </div>
 
-  <script src="js/scripts.js" async></script>
-
   <div id="particles-js"></div>
 
-  <script src="js/particles.min.js"></script>
-
+  <script src="js/scripts.js" async></script>
+  <script src="js/particles.min.js" async></script>
   <script>
-    particlesJS.load('particles-js', 'js/particlesjs-config.json');
+    document.onreadystatechange = () => {
+      if (document.readyState === 'complete') {
+        particlesJS.load('particles-js', 'js/particlesjs-config.json');
+      }
+    }
   </script>
 </body>
 
